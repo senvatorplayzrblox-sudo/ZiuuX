@@ -1,0 +1,43 @@
+import type { ProviderRegistry } from '../ai/ProviderRegistry.js';
+import type { AIClassifier } from '../ai/AIClassifier.js';
+import type { PermissionService } from '../permissions/PermissionService.js';
+import type { OwnerGate } from '../permissions/OwnerGate.js';
+import type { ActionMarkers } from '../services/ActionMarkers.js';
+import type { AIConfigService } from '../services/AIConfigService.js';
+import type { AIModerationService } from '../services/AIModerationService.js';
+import type { AuditService } from '../services/AuditService.js';
+import type { BlockedWordService } from '../services/BlockedWordService.js';
+import type { BotSettingsService } from '../services/BotSettingsService.js';
+import type { CaseService } from '../services/CaseService.js';
+import type { CommandConfigService } from '../services/CommandConfigService.js';
+import type { GuildSettingsService } from '../services/GuildSettingsService.js';
+import type { HealthService } from '../services/HealthService.js';
+import type { LockService } from '../services/LockService.js';
+import type { LoggingService } from '../services/LoggingService.js';
+import type { ModerationService } from '../services/ModerationService.js';
+import type { RetentionService } from '../services/RetentionService.js';
+import type { StaffPanelService } from '../services/StaffPanelService.js';
+import type { WarningService } from '../services/WarningService.js';
+
+export interface Services {
+  providers: ProviderRegistry;
+  classifier: AIClassifier;
+  permissions: PermissionService;
+  ownerGate: OwnerGate;
+  markers: ActionMarkers;
+  audit: AuditService;
+  guildSettings: GuildSettingsService;
+  commandConfig: CommandConfigService;
+  cases: CaseService;
+  warnings: WarningService;
+  locks: LockService;
+  logging: LoggingService;
+  moderation: ModerationService;
+  staffPanel: StaffPanelService;
+  botSettings: BotSettingsService;
+  aiConfig: AIConfigService;
+  blockedWords: BlockedWordService;
+  aiModeration: AIModerationService;
+  health: HealthService;
+  retention: RetentionService;
+}

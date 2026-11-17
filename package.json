@@ -1,0 +1,35 @@
+{
+  "name": "ziuux",
+  "version": "1.0.0",
+  "description": "ZiuuX - moderation, AI moderation, logging and staff tooling Discord bot",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/index.js",
+    "dev": "tsx watch src/index.ts",
+    "deploy-commands": "node dist/scripts/deploy-commands.js",
+    "verify-emojis": "node dist/scripts/verify-emojis.js",
+    "ai-smoke-test": "node dist/scripts/ai-smoke-test.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "npm run typecheck",
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "node scripts/run-tests.mjs",
+    "verify:install": "npm install && npm ci && npm run build && npm test"
+  },
+  "dependencies": {
+    "@types/node": "^20.17.0",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.8.1",
+    "pino": "^9.5.0",
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
