@@ -23,7 +23,7 @@ function isTextChannel(channel: unknown): channel is TextChannel {
   return Boolean(channel && typeof channel === "object" && "send" in channel && "permissionOverwrites" in channel);
 }
 
-export async function handleCommand(i: SlashCommandInteraction): Promise<void> {
+export async function handleCommand(i: CommandInteraction): Promise<void> {
   if (!i.guild) {
     await i.reply({ content: "This command can only be used in a server.", ephemeral: true });
     return;
