@@ -1,6 +1,6 @@
 import {
   ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelType, EmbedBuilder,
-  PermissionFlagsBits, SlashCommandInteraction, StringSelectMenuBuilder,
+  PermissionFlagsBits, CommandInteraction, StringSelectMenuBuilder,
   TextChannel, User
 } from "discord.js";
 import { GuildConfig } from "../models/GuildConfig.js";
